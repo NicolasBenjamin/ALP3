@@ -1,0 +1,176 @@
+\documentclass[a4paper,twoside,12pt]{article}
+%\usepackage [reqno] {amsmath}
+\usepackage{amsfonts,amstext}
+\usepackage{amsmath}
+\usepackage{german}
+\usepackage{fullpage}
+
+\newcommand{\ZETTELNUMMER}{1}
+\newcommand{\ABGABEDATUM}{am 27. Oktober~2017 bis 10 Uhr in die 
+  jeweiligen Tutorenf\"acher}
+
+\newcounter{AUFGNR}
+\setcounter{AUFGNR}{1}
+\newcommand{\AUFGABE}[2]{\vspace{0.3cm}\item[Aufgabe \arabic{AUFGNR}]\stepcounter{AUFGNR} #1\hfill\emph{#2}}
+
+
+\newcommand{\floor}[1]{\left\lfloor{#1}\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil{#1}\right\rceil}
+\newcommand{\half}[1]{\frac{#1}{2}}
+
+
+
+\renewcommand{\labelenumi}{(\alph{enumi})}
+
+
+\begin{document}
+\pagestyle{empty}
+\hrule\medskip
+\rule{0ex}{0ex}\\[-1ex]
+\ZETTELNUMMER. Aufgabenblatt zur Vorlesung
+
+\smallskip
+\noindent
+\large
+\textbf{Algorithmen, Datenstrukturen und Datenabstratkion}\hfill WS 17/18 \\[0.5ex]
+\normalsize
+Wolfgang Mulzer, Katharina Klost
+
+\medskip\hrule
+
+\smallskip
+\noindent
+\textbf{Abgabe} \ABGABEDATUM
+
+\vskip 0.5cm
+
+\begin{description}
+
+\AUFGABE{Rekursionsgleichungen}{10 Punkte}
+
+L\"osen Sie die folgenden Rekursionsgleichungen.
+Beweisen Sie jeweils die Richtigkeit Ihrer L\"osung
+(z.B. durch vollst\"andige Induktion).
+\begin{enumerate}
+  \item
+    \[
+       T(1) = 0; \quad T(n) = 
+       T\Bigl(\left\lfloor \frac{n}{2}\right\rfloor\Bigr) +
+                 T\Bigl(\left\lceil \frac{n}{2} \right\rceil\Bigr) + n, 
+		 \text{ f\"ur } n > 1.
+    \]
+    Sie d\"urfen annehmen, dass $n$ eine Zweierpotenz ist.
+  \item 
+    \[
+      S(1) = 1; \quad S(n) = \sum_{i=1}^{n-1} i \cdot S(i), 
+        \text{ f\"ur } n > 1.
+    \]
+\end{enumerate}
+
+
+\AUFGABE{Die Ungleichung vom arithmetischen und geometrischen Mittel}{10 Punkte}
+
+
+Seien $x_1, x_2, \ldots, x_n \geq 0$. Beweisen Sie
+die Ungleichung
+\[
+P(n): x_1 x_2 \ldots x_n
+\leq\left(\frac{x_1+\dots+x_n}{n}\right)^n,
+\]
+indem Sie folgende Teilschritte bearbeiten:
+\begin{enumerate}
+  \item $P(2)$ ist eine wahre Aussage.
+
+     \emph{Hinweis}: $(x_1 - x_2)^2 \geq 0$.
+  \item
+     Wenn $P(n)$ gilt, dann gilt auch $P(n-1)$.
+
+     \emph{Hinweis}: Wie muss man $x_n$ w\"ahlen, damit 
+     sich der Wert der rechten Klammer nicht \"andert, wenn
+     $x_1, \ldots, x_{n-1}$ schon feststehen?
+
+   \item Aus $P(2)$ und $P(n)$ folgt $P(2n)$.
+   \item Folgern Sie nun die Ungleichung. 
+\end{enumerate}
+
+\AUFGABE{Manipulation elementarer Funktionen}{10 Punkte}
+
+Finden Sie Paare von \"aquivalenten Termen und formen Sie diese
+schrittweise ineinander um. Geben Sie die verwendeten Regeln an.
+\[
+ \log_a\Bigl(n^{\log_b a}\Bigr), \sqrt[b]{\frac{a^n}{a^m}},
+ b^{n \log a}, \log_b n, a^{\frac{n-m}{b}}, n(\log a + \log b),
+ \log(a^nb^n),a^{(\log b^n)}.
+\]
+\iffalse
+\AUFGABE{Die inverse schnelle Fouriertransformation (freiwillig)}
+{10 Zusatzpunkte}
+
+\begin{enumerate}
+\item Zeigen Sie mit einer Beweismethode Ihrer Wahl,
+dass f\"ur alle $x \not= 1$ und alle $n \geq 0$ gilt:
+\[
+\sum_{i=0}^{n} x^i = \frac{x^{n+1}-1}{x-1}.
+\]
+\item Im Folgenden sei $n+1$ eine Zweierpotenz und
+$\omega \in \mathbb{C}$ eine 
+\emph{komplexe} primitive $(n+1$)-te Einheitswurzel
+(d.h., $\omega^{n+1} = 1$ und $\omega^k \neq 1$, f\"ur
+$k=1, \dots, n$).
+Sei $p(x) = a_0 + a_1 x + \dots + a_{n} x^{n}$
+ein Polynom vom Grad $n$.
+
+In der Vorlesung haben Sie gesehen,
+wie man schnell die Werte $p(\omega^0)$,
+$p(\omega^1)$, $\ldots$, $p(\omega^{n})$ ausrechnen kann.
+Sei $A = (a_{ij})$ die $(n+1) \times (n+1)$ Matrix
+mit $a_{ij} = \omega^{(i-1)(j-1)}$.
+
+Zeigen Sie, wie man das Ausrechnen von
+$p(\omega^0)$,
+$p(\omega^1)$, $\ldots$, $p(\omega^{n})$
+als Multiplikation von
+$A$ mit einem Vektor darstellen kann. Das hei\ss{}t, finden
+Sie einen Spaltenvektor $v \in \mathbb{C}^{n+1}$ mit
+\[
+\left(\begin{matrix} p(\omega^0) \\ p(\omega^1) \\ \vdots \\ p(\omega^{n}) 
+\end{matrix} \right)= A\cdot v.
+\]
+\item
+  Sei $B = (b_{ij})$ die $(n+1) \times (n+1)$ Matrix mit
+  $b_{ij} = \frac{1}{n+1}\omega^{-(i-1)(j-1)}$.
+  Zeigen Sie, dass $B \cdot A = I$ ist, wobei $I$ 
+  auf der Diagonale nur Einsen und in den
+  sonstigen Eintr\"agen nur Nullen enth\"alt (die \emph{Einheitsmatrix}). 
+  Insbesondere ist
+  $B \cdot A \cdot w = w$, f\"ur alle $w \in \mathbb{C}^{n+1}$.
+
+  \emph{Hinweis:} Verwenden Sie (a) und beachten Sie, dass $\omega$
+      eine $(n+1)$-te Einheitswurzel ist.
+
+\item Sei nun $p(x)$ ein Polynom vom Grad $n$,
+  von dem nur die Werte
+  $p(\omega^0)$, $p(\omega^1)$, $\ldots$, $p(\omega^{n})$
+  bekannt sind.
+  Beschreiben Sie ein Verfahren, um in
+  $O(n \log n)$ Operationen die Koeffizienten
+  von $p(x)$ zu erhalten. 
+
+  \emph{Hinweis:} Aufgrund von (c) m\"ussen wir die Matrix $B$
+     mit einem geeigneten Spaltenvektor multiplizieren. Zeigen Sie,
+     dass dies der Auswertung eines geeigneten Polynoms an den Stellen
+     $\omega^{-0}$, $\omega^{-1}$, $\ldots$, $\omega^{-n}$ entspricht.
+     Gehen Sie analog zur Vorlesung vor, um dies in
+     $O(n \log n)$ Operationen zu bewerkstelligen.
+
+ \item 
+    Seien $p(x)$ und $q(x)$ zwei Polynome vom Grad $n$
+    in Koeffizientenform. 
+    Skizzieren Sie ein Verfahren, wie man in $O(n\log n)$ Operationen
+    das Produkt $r(x) = p(x) \cdot q(x)$
+    in Koeffizientenform berechnen kann 
+    (\emph{Achtung}: Das Produkt hat Grad $2n$.).
+\end{enumerate}
+\fi
+\end{description}
+\end{document}
