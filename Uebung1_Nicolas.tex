@@ -48,9 +48,6 @@ Wolfgang Mulzer, Katharina Klost
 
 \AUFGABE{Rekursionsgleichungen}{10 Punkte}
 
-L\"osen Sie die folgenden Rekursionsgleichungen.
-Beweisen Sie jeweils die Richtigkeit Ihrer L\"osung
-(z.B. durch vollst\"andige Induktion).
 \begin{enumerate}
   \item
     \[
@@ -60,11 +57,55 @@ Beweisen Sie jeweils die Richtigkeit Ihrer L\"osung
 		 \text{ f\"ur } n > 1.
     \]
     Sie d\"urfen annehmen, dass $n$ eine Zweierpotenz ist.
+\newline    
+\newline  
+\textbf{L\"osung:}
+\newline  Ermitteln eines Musters f\"r geschlossene Formel durch Ausprobieren.
+\newline T(2)=T(1)+T(1)+2=2
+\newline T(4)=T(2)+T(2)+4=8
+\newline T(8)=T(4)+T(4)+8=8+8+8=24
+\newline T(16)=T(8)+T(8)+16=24+24+16
+\newline usw...
+\newline
+\newline Es lässt sich folgende geschlossene Formel erkennen: 
+
+\begin{equation*}
+   T(n) =
+   \begin{cases}
+     0 & \text{f"ur } n=1 \\
+     n \cdot log(n) & \text{sonst} \\
+   \end{cases}
+\end{equation*}
+
+\smallskip
+\smallskip
+\textbf{Beweis der geschlossenen Formel mithilfe vollst"andiger Induktion:}
+\newline
+\newline \textbf{I.A.:}
+\newline n=2
+\newline $T(2)=2 \cdot log(2)=2 \cdot 1=2=0+0+2=T(1)+T(1)+2$
+\newline
+\newline \textbf{I.S.:}
+\newline
+\newline $n->2n$
+\newline $T(2n)=  T\Bigl(\left\lfloor \frac{2 \cdot n}{2}\right\rfloor\Bigr) +
+                 T\Bigl(\left\lceil \frac{2 \cdot n}{2} \right\rceil\Bigr) + 2 \cdot n $
+\newline $= T(n) + T(n) + 2 \cdot n$
+\newline $= T\Bigl(\left\lfloor \frac{n}{2}\right\rfloor\Bigr) +
+                 T\Bigl(\left\lceil \frac{n}{2} \right\rceil\Bigr) + n + T\Bigl(\left\lfloor \frac{n}{2}\right\rfloor\Bigr) +
+                 T\Bigl(\left\lceil \frac{n}{2} \right\rceil\Bigr) + n + 2 \cdot n$       
+\newline $\overset{\text{I.V.}}{=} n \cdot log(n) + n \cdot log(n) + 2 \cdot n$
+\newline $= 2 \cdot n \cdot log(n) + 2 \cdot n$
+\newline $= 2 \cdot (n \cdot log(n) + n)$
+\newline $= 2(n \cdot log(n) + n \cdot log(2))$
+\newline $= 2n \cdot log(2n)$
+
   \item 
     \[
       S(1) = 1; \quad S(n) = \sum_{i=1}^{n-1} i \cdot S(i), 
         \text{ f\"ur } n > 1.
     \]
+    
 \end{enumerate}
 
 
