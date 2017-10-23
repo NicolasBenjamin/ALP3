@@ -1,0 +1,42 @@
+% ////////////// Notenspiegel und Logo //////////////
+\vspace*{-15ex}							% rückt Logo an den oberen Seitenrand
+\makebox[\dimexpr\textwidth+1cm][r]{		%rechtsbündig und geht rechts 1cm über Layout hinaus
+	\begin{minipage}{0.5\linewidth}
+	\newcounter{AufgNo}
+	\setcounter{AufgNo}{\aufgNo}
+	\stepcounter{AufgNo}					% AufgNo++
+	\newcounter{zahl}
+	\def\and{&\xspace}
+	\renewcommand{\arraystretch}{1.3}\setlength{\tabcolsep}{1em}
+	\begin{tabular}{*{\value{AufgNo}}{|c} |}
+		\hline
+		\setcounter{zahl}{1}
+		\whiledo{\value{zahl} < \value{AufgNo}}{%\AufgNo 
+			\thezahl\and\stepcounter{zahl}%
+		} $\sum$ \\ \hline
+		\setcounter{zahl}{1}
+		\whiledo{\value{zahl} < \value{AufgNo}}{%\AufgNo 
+			\and\stepcounter{zahl}%
+		} \\ \hline
+	\end{tabular}
+
+	%\forloop{ct}{1}{\value{ct} < 5}{}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.5\linewidth}
+	\hfill \ifnum\aufgNo<9%				blendet ab 9 Aufgaben das Logo aus
+	\includegraphics[width=0.8\textwidth]{src/fu_logo} % fügt FU-Logo ein
+	\fi
+	\end{minipage}
+}
+% ////////////// Daten //////////////
+\begin{center}
+{\large \dozent}\par
+{\huge \veranstaltung, \semester}\par
+{\large TutorIn: \tutor, Tutorium \tutoriumNo}\par
+{\Large Übung \ubungNo}\par 
+{\large \studenten}\par
+\today
+\end{center}
+\vspace{-3ex}							% Abstand
+\rule{\linewidth}{0.8pt}				% horizontale Linie
