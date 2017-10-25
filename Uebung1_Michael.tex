@@ -95,8 +95,76 @@ Daraus erkennt man die geschlossene Formel: $a_{n} = n * log_{2}n$
 \begin{center}
 $S(1) = 1; S(n) = \displaystyle\sum_{i=1}^{n-1}i * S(i)$, für n > 1 
 \end{center}
-
+	\begin{itemize}
+	
+       $S(1) = 1 = 1$ \\
+       $S(2) = 1 * S(1) = 1$ \\
+       $S(3) = S(1) + 2*S(2) = 3$ \\
+       $S(4) = S(1) + 2*S(2) + 3*S(3) = 12$ \\
+       $S(5) = S(1) + 2*S(2) + 3*S(3) + 4*S(4)$
+       \\
+       Daraus ist zu erkennen: 
+       $S(1) = 1$ \\
+       $S(2) = 1$ \\
+       $S(3) = 6 = 3 * 2$ \\
+       $S(4) = 24 = 4 * 3 * 2 $ \\
+       $S(5) = 120 = 5 * 4 * 3 * 2$ \\
+       \\
+       folglich kann allgemein gesagt werden: \\
+       \[ a(n)= 
+       		\begin{cases}
+       			1 &\quad 0 < n}\leq2  \\     			
+       			\frac{n!}{2} &\quad \text{sonst}
+       		\end{cases}
+       \]
+       
+       \begin{proof}	
+	   \[       
+       S(1) = 1, \quad \\
+       S(n) = \displaystyle\sum_{i=1}^{n-1}i * S(i)  \quad \text{für n>1} \\
+       \\
+       \]
+       \[
+        a(n) = 
+       		\begin{cases}
+       			1 &\quad 0 < n\leq2  \\     			
+       			\frac{n!}{2} &\quad \text{sonst}
+       		\end{cases}
+       \]
+       \newpage
+       
+       Induktionsanfang: \\
+       n=1 \\
+       $a(1) = S(1)$ \\
+       n = 2\\
+       $a(2) = S(2)$ \\
+       gewähltes n > 2, also sei n=3\\
+       $S(3) = 3 = a(n)$ \\
+       \\
+       Induktionvorraussetzung: S(n) = a(n)\\
+       \\
+       Induktionsbehauptung: \\
+       S(n+1) = a(n+1), wobei vorausgesetzt ist, dass S(n)bereits per Induktion bewiesen wurde\\
+	   \\       
+       Induktionsschritt: \quad $n \rightarrow n+1$ \\
+       \\
+       
+	   \begin{equation}
+		\begin{aligned}
+			S(n+1)&=\left\displaystyle\sum_{i=1}^{n} i * S(i) \\
+				  &= n * S(n) + \displaystyle\sum_{i=1}^{n-1} i * S(i) \\
+				  &= n * S(n) + S(n) \notag \\
+				  &= S(n) * (n+1) \\
+				  &\overset{IV}{=} \frac{n!}{2} * (n+1) \\
+				  &= \frac{(n+1)!}{2} = a(n+1) \right
+		\end{aligned}			  	   
+	   \end{equation}	          
+       \end{proof}
+   \end{itemize}    
+	
+	         
 \newpage
+
 
 \section{Die Ungleichung vom arithmetischen und geometrischen Mittel}
 
@@ -122,6 +190,64 @@ indem Sie folgende Teilschritte bearbeiten:
    \item Aus $P(2)$ und $P(n)$ folgt $P(2n)$.
    \item Folgern Sie nun die Ungleichung. 
 \end{enumerate}
+\\
+Lösungen: \\
+\begin{itemize}
+	\item 2a)\\
+		$P(2)\quad \text{ist wahre Aussage}$ \\
+		\begin{proof}
+			\begin{equation}
+				\begin{aligned}
+					\left			
+					 x_1 * x_2 &\leq (\frac{x_1+x_2}{2})^2	\\
+					 x_1 * x_2 &\leq \frac{(x_1+x_2)^2}{4}		\\
+					 4*x_1*x_2 &\leq (x_1 + x_2)^2 \notag	\\
+					 4*x_1*x_2 &\leq {x_1}^2 + 2*x_1*x_2 + {x_2}^2 \\
+					 0 &\leq {x_1}^2 - 2*x_1*x_2 + {x_2}^2 \\
+					 0 &\leq (x_1 - x_2)^2 \right
+				\end{aligned}
+			\end{equation}
+		\end{proof}
+	\item 2b\\
+		$P(n) \leftrightarrow P(n-1)$ \\
+		\begin{proof} \\
+			Es gilt: \\
+			\begin{equation}
+				\begin{aligned}
+					x_1*x_2*x_3 \dots x_n &\leq \left(\frac{x_1+x_2+ \dots +x_n}{n}\right)^n 
+					\Leftrightarrow \sqrt[n]{x_1*x_2*x_3 \dots x_n} &\leq \left(\frac{x_1+x_2+ \dots +x_n}{n}\right) \notag \\
+				\end{aligned}
+			\end{equation}
+			Sei $ x_n = \sqrt[n-1]{x_1x_2 \dots x_{n-1}}$ \\
+			Nach Einsetzen gilt: \\
+			\begin{equation}
+				\begin{aligned}
+					\sqrt[n]{x_1x_2 \dots x_{n-1}*\sqrt[n-1]{x_1x_2 \dots x_{n-1}}} &\overset{?}{=} \sqrt[n-1]{x_1x_2 \dots x_{n-1}} \notag \\
+				\sqrt[n]{x_1x_2 \dots x_{n-1}}*\sqrt[n]{\sqrt[n-1]{x_1x_2 \dots x_{n-1}}} &\Leftrightarrow \left(x_1x_2 \dots x_{n-1}\right)^{\frac{1}{n}} * \left(\sqrt[n-1]{x_1x_2 \dots x_{n-1}} \right)^{\frac{1}{n}} \\
+				&\Leftrightarrow \left(x_1x_2 \dots x_{n-1}\right)^{\frac{1}{n}} * \left(\left(x_1x_2 \dots x_{n-1}\right)^{\frac{1}{n-1}}\right)^{\frac{1}{n}} \\
+				&\Leftrightarrow \left(x_1x_2 \dots x_{n-1}\right)^{\frac{1}{n}} * \left(x_1x_2 \dots x_{n-1}\right)^{\frac{1}{n^2-n}} \\
+				&\Leftrightarrow \left(x_1x_2 \dots x_{n-1}\right)^{\frac{1}{n} + \frac{1}{n^2-n}}\\
+				&\Leftrightarrow \left(x_1x_2 \dots x_{n-1}\right)^{\frac{1}{n-1}} \\
+				&\Leftrightarrow \sqrt[n-1]{x_1x_2 \dots x_{n-1}} = x_{n-1}\\
+				\end{aligned}
+			\end{equation}
+			Damit gilt:  $\sqrt[n]{x_1x_2 \dots x_{n-1}*\sqrt[n-1]{x_1x_2 \dots x_{n-1}}} = \sqrt[n-1]{x_1x_2 \dots x_{n-1}}$ \\
+			x_n einsetzen in Ungleichung  \\
+			
+			\begin{equation}
+				\begin{aligned}
+					\frac{x_1+x_2+ \dots +x_{n-1}+\sqrt[n-1]{x_1x_2 \dots x_{n-1}}}{n} &\geq \sqrt[n]{x_1x_2 \dots x_{n-1}*\sqrt[n-1]{x_1x_2 \dots x_{n-1}}} \quad |erstzen durch Term (s.o.)\notag \\
+					\frac{x_1+x_2+ \dots +x_{n-1}+\sqrt[n-1]{x_1x_2 \dots x_{n-1}}}{n} &\geq  \sqrt[n-1]{x_1x_2 \dots x_{n-1}} \\
+					\Leftrightarrow x_1+x_2+ \dots + x_{n-1}+\sqrt[n-1]{x_1x_2 \dots x_{n-1}} &\geq n*\sqrt[n-1]{x_1x_2 \dots x_{n-1}}	\\				
+				    \Leftrightarrow x_1+x_2+ \dots + x_{n-1} &\geq n*\sqrt[n-1]{x_1x_2 \dots x_{n-1}} - \sqrt[n-1]{x_1x_2 \dots x_{n-1}} \\
+				    \Leftrightarrow x_1+x_2+ \dots + x_{n-1} &\geq  \left(n-1\right)*	\sqrt[n-1]{x_1x_2 \dots x_{n-1}} \\
+				    \Leftrightarrow \frac{x_1+x_2+ \dots + x_{n-1}}{n-1} &\geq \sqrt[n-1]{x_1x_2 \dots x_{n-1}} \Leftrightarrow P(n-1)\\				
+				\end{aligned}
+			\end{equation}
+		\end{proof}
+	\item 
+	
+  \end{itemize}
 
 \newpage
 
