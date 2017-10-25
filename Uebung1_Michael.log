@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.10.20)  25 OCT 2017 13:06
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.10.20)  25 OCT 2017 21:28
 entering extended mode
 **./Uebung1_Michael.tex
 (Uebung1_Michael.tex
@@ -1564,14 +1564,14 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--38
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
 ! Undefined control sequence.
 <argument> \LaTeX3 error: 
                            Erroneous variable \c__fontspec_shape_n_it_tl used!
-l.43         E
+l.48         E
               s folgt der dazugehörige Beweis durch vollständige Induktion
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1580,62 +1580,131 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--66
+Underfull \hbox (badness 10000) in paragraph at lines 75--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--86
- 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--86
- 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--86
- 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--86
- 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--86
- 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 86.
+(babel)             in language  on input line 82.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 86.
+(babel)             in language  on input line 82.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 86.
+(babel)             in language  on input line 82.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 86.
+(babel)             in language  on input line 82.
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 100--114
+! Missing $ inserted.
+<inserted text> 
+                $
+l.91 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
- []
+! Missing } inserted.
+<inserted text> 
+                }
+l.91 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.91 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.91 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.91 
+     
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.91 
+     
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.91 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced \crcr.
+\endaligned ->\crcr 
+                    \egroup \restorecolumn@ \egroup 
+l.92 ^^I^^I^^I\end{aligned}
+                           
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten \endgroup.
+\endaligned ->\crcr \egroup 
+                            \restorecolumn@ \egroup 
+l.92 ^^I^^I^^I\end{aligned}
+                           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+\endaligned ...cr \egroup \restorecolumn@ \egroup 
+                                                  
+l.92 ^^I^^I^^I\end{aligned}
+                           
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--114
+Underfull \hbox (badness 10000) in paragraph at lines 122--125
 
  []
 
 ! Extra }, or forgotten $.
-l.116        ^^I^^I^^I1 &\quad 0 < n}
+l.127        ^^I^^I^^I1 &\quad 0 < n}
                                      \leq2  \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1650,7 +1719,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.122 ^^I   \[
+l.133 ^^I   \[
               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1662,7 +1731,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.122 ^^I   \[
+l.133 ^^I   \[
               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1674,7 +1743,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.122 ^^I   \[
+l.133 ^^I   \[
               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1686,7 +1755,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.122 ^^I   \[
+l.133 ^^I   \[
               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1694,7 +1763,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Undefined control sequence.
 <argument> \LaTeX3 error: 
                            Erroneous variable \c__fontspec_shape_n_it_tl used!
-l.122 ^^I   \[
+l.133 ^^I   \[
               
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1705,7 +1774,7 @@ and I'll forget about whatever was undefined.
 ! Improper \prevdepth.
 \newpage ...everypar {}\fi \par \ifdim \prevdepth 
                                                   >\z@ \vskip -\ifdim \prevd...
-l.134        \newpage
+l.145        \newpage
                      
 You can refer to \spacefactor only in horizontal mode;
 you can refer to \prevdepth only in vertical mode; and
@@ -1719,19 +1788,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.134        \newpage
+l.145        \newpage
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 145.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 134.
+(babel)             in language  on input line 145.
 [2]
 
 ! LaTeX Error: Something's wrong--perhaps a missing \item.
@@ -1740,40 +1809,50 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.135 
+l.146 
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--151
+Underfull \hbox (badness 10000) in paragraph at lines 147--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--151
+Underfull \hbox (badness 10000) in paragraph at lines 147--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--151
+Underfull \hbox (badness 10000) in paragraph at lines 147--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--151
+Underfull \hbox (badness 10000) in paragraph at lines 147--163
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--151
+Underfull \hbox (badness 10000) in paragraph at lines 147--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--163
 
  []
 
 ! Missing delimiter (. inserted).
 <to be read again> 
                    \displaystyle 
-l.154 ^^I^^I^^IS(n+1)&=\left\displaystyle
+l.166 ^^I^^I^^IS(n+1)&=\left\displaystyle
                                          \sum_{i=1}^{n} i * S(i) \\
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1785,7 +1864,7 @@ nonnegative, or you can use `\delimiter <delimiter code>'.
 ! Extra }, or forgotten \right.
 <template> }
             $\hfil \endtemplate 
-l.154 ...ft\displaystyle\sum_{i=1}^{n} i * S(i) \\
+l.166 ...ft\displaystyle\sum_{i=1}^{n} i * S(i) \\
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1796,7 +1875,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.154 ...ft\displaystyle\sum_{i=1}^{n} i * S(i) \\
+l.166 ...ft\displaystyle\sum_{i=1}^{n} i * S(i) \\
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1807,7 +1886,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.154 ...ft\displaystyle\sum_{i=1}^{n} i * S(i) \\
+l.166 ...ft\displaystyle\sum_{i=1}^{n} i * S(i) \\
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1818,7 +1897,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.159 ...I^^I  &= \frac{(n+1)!}{2} = a(n+1) \right
+l.171 ...I^^I  &= \frac{(n+1)!}{2} = a(n+1) \right
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1829,7 +1908,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    \crcr 
-l.160 ^^I^^I\end{aligned}
+l.172 ^^I^^I\end{aligned}
                          
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1841,37 +1920,37 @@ nonnegative, or you can use `\delimiter <delimiter code>'.
 ! Extra \right.
 <to be read again> 
                    \crcr 
-l.160 ^^I^^I\end{aligned}
+l.172 ^^I^^I\end{aligned}
                          
 I'm ignoring a \right that had no matching \left.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.160 ^^I^^I\end{aligned}
+l.172 ^^I^^I\end{aligned}
                          
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 178.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 166.
+(babel)             in language  on input line 178.
 [3]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 169.
+(babel)             in language  on input line 181.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 169.
+(babel)             in language  on input line 181.
 
 ! Undefined control sequence.
 <argument> \LaTeX3 error: 
                            Erroneous variable \c__fontspec_shape_n_it_tl used!
-l.182      \emph{Hinweis}
+l.194      \emph{Hinweis}
                          : $(x_1 - x_2)^2 \geq 0$.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1882,7 +1961,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \LaTeX3 error: 
                            Erroneous variable \c__fontspec_shape_n_it_tl used!
-l.186      \emph{Hinweis}
+l.198      \emph{Hinweis}
                          : Wie muss man $x_n$ w\"ahlen, damit
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1897,26 +1976,26 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.194 L
+l.206 L
        ösungen: \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--199
+Underfull \hbox (badness 10000) in paragraph at lines 208--211
 
  []
 
 ! Undefined control sequence.
 <argument> \LaTeX3 error: 
                            Erroneous variable \c__fontspec_shape_n_it_tl used!
-l.199 ^^I^^I^^I\begin
+l.211 ^^I^^I^^I\begin
                      {equation}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1927,7 +2006,7 @@ and I'll forget about whatever was undefined.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    x
-l.202 ^^I^^I^^I^^I^^I x
+l.214 ^^I^^I^^I^^I^^I x
                        _1 * x_2 &\leq (\frac{x_1+x_2}{2})^2^^I\\
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1939,7 +2018,7 @@ nonnegative, or you can use `\delimiter <delimiter code>'.
 ! Extra }, or forgotten \right.
 <template> }
             $\endtemplate 
-l.202 ^^I^^I^^I^^I^^I x_1 * x_2 &
+l.214 ^^I^^I^^I^^I^^I x_1 * x_2 &
                                  \leq (\frac{x_1+x_2}{2})^2^^I\\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1950,7 +2029,7 @@ deleted material, e.g., by typing `I$}'.
 ! Missing \right. inserted.
 <inserted text> 
                 \right .
-l.202 ^^I^^I^^I^^I^^I x_1 * x_2 &
+l.214 ^^I^^I^^I^^I^^I x_1 * x_2 &
                                  \leq (\frac{x_1+x_2}{2})^2^^I\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1961,7 +2040,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.202 ^^I^^I^^I^^I^^I x_1 * x_2 &
+l.214 ^^I^^I^^I^^I^^I x_1 * x_2 &
                                  \leq (\frac{x_1+x_2}{2})^2^^I\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1972,7 +2051,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.207 ^^I^^I^^I^^I^^I 0 &\leq (x_1 - x_2)^2 \right
+l.219 ^^I^^I^^I^^I^^I 0 &\leq (x_1 - x_2)^2 \right
                                                   
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1983,7 +2062,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing delimiter (. inserted).
 <to be read again> 
                    \crcr 
-l.208 ^^I^^I^^I^^I\end{aligned}
+l.220 ^^I^^I^^I^^I\end{aligned}
                                
 I was expecting to see something like `(' or `\{' or
 `\}' here. If you typed, e.g., `{' instead of `\{', you
@@ -1995,28 +2074,28 @@ nonnegative, or you can use `\delimiter <delimiter code>'.
 ! Extra \right.
 <to be read again> 
                    \crcr 
-l.208 ^^I^^I^^I^^I\end{aligned}
+l.220 ^^I^^I^^I^^I\end{aligned}
                                
 I'm ignoring a \right that had no matching \left.
 
 ! Missing { inserted.
 <inserted text> 
                 {
-l.208 ^^I^^I^^I^^I\end{aligned}
+l.220 ^^I^^I^^I^^I\end{aligned}
                                
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--213
+Underfull \hbox (badness 10000) in paragraph at lines 223--225
 
  []
 
 ! Undefined control sequence.
 <argument> \LaTeX3 error: 
                            Erroneous variable \c__fontspec_shape_n_it_tl used!
-l.213 ^^I^^I\begin{proof} \\
+l.225 ^^I^^I\begin{proof} \\
                             
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2031,35 +2110,35 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214 ^^I^^I^^IE
+l.226 ^^I^^I^^IE
                 s gilt: \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--223
+Underfull \hbox (badness 10000) in paragraph at lines 232--235
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 245.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 245.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 245.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 233.
+(babel)             in language  on input line 245.
 [4]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.235 ^^I^^I^^Ix_
+l.247 ^^I^^I^^Ix_
                  n einsetzen in Ungleichung  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2067,7 +2146,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.236 
+l.248 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2075,7 +2154,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.236 
+l.248 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2086,7 +2165,7 @@ my insertion and my current dilemma will both disappear.
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.236 
+l.248 
       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2095,28 +2174,88 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Overfull \hbox (24.92204pt too wide) detected at line 246
+Overfull \hbox (24.92204pt too wide) detected at line 258
 [][][][]
  []
 
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 252.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 252.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 252.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 252.
-[5]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 254.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 254.
 
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+
+ []
+
+! Misplaced alignment tab character &.
+l.269 ...ei $\quad \frac{x_1+x_2+ \dots +x_n}{n} &
+                                                  \geq \sqrt[n]{x_1x_2 \dots...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.270 ...frac{x_{n+1}+x_{n+2}+ \dots +x_{2n}}{n} &
+                                                  \geq \sqrt[n]{x_1x_2 \dots...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--272
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 272.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 272.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 272.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 272.
+[5]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.290 \\
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 
+      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 292.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 292.
 ! Undefined control sequence.
 <argument> \LaTeX3 error: 
                            Erroneous variable \c__fontspec_shape_n_it_tl used!
-l.263 {\itshape
+l.301 {\itshape
                 Lösungen}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2125,43 +2264,43 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 324.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 286.
+(babel)             in language  on input line 324.
 [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 286.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 286.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 324.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 324.
  (Uebung1_Michael.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 286.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 286.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 286.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 324.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 324.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 324.
  ) 
 Here is how much of TeX's memory you used:
- 39223 strings out of 427834
- 782420 string characters out of 3152469
- 1016928 words of memory out of 3000000
- 42610 multiletter control sequences out of 15000+200000
- 543772 words of font info for 54 fonts, out of 3000000 for 9000
+ 39231 strings out of 427834
+ 782622 string characters out of 3152469
+ 1018928 words of memory out of 3000000
+ 42614 multiletter control sequences out of 15000+200000
+ 543788 words of font info for 56 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 66i,17n,67p,10427b,486s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 66i,17n,67p,10427b,484s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on Uebung1_Michael.pdf (6 pages).

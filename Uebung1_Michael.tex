@@ -24,20 +24,25 @@
 \end{flushleft}
 
 \begin{center}
-$T(1) = 0; T(n) = T(\lfloor{\frac{n}{2}}\rfloor) + T(\lceil{\frac{n}{2}}\rceil) + n$, für n > 1 
+$T(1) = 0; \quad T(n) = T\left(\lfloor{\frac{n}{2}}\rfloor\right) + T\left(\lceil{\frac{n}{2}}\rceil\right) + n$, für n > 1 
 \end{center}
 
 
 
 \begin{itemize}
 \item  Ergebnisse durch Einsetzen von Zweierpotenzen von n\\
-	$T(2) = T(1) + T(1) + 2 = 2$ \\
-    $T(4) = T(2) + T(2) + 4 = 8$ \\
-    $T(8) = T(4) + T(4) + 8 = 24$ \\
-    $T(16) = T(8) + T(8) + 16 = 64$ \\
+	\begin{equation}
+		\begin{aligned}
+		 	T(2) &= T(1) + T(1) + 2 = 2 \\
+   			T(4) &= T(2) + T(2) + 4 = 8 \\
+   			T(8) &= T(4) + T(4) + 8 = 24 \notag \\
+   			T(16)&= T(8) + T(8) + 16 = 64 \\		
+		\end{aligned}
+	\end{equation}
+	
 \end{itemize}
  
-Daraus erkennt man die geschlossene Formel: $a_{n} = n * log_{2}n$
+Daraus erkennt man die geschlossene Formel: $a(n) = n * log_{2}n$
 
 \begin{proof}
         Es folgt der dazugehörige Beweis durch vollständige Induktion 
@@ -53,39 +58,39 @@ Daraus erkennt man die geschlossene Formel: $a_{n} = n * log_{2}n$
 
 	\begin{itemize}
 	\item Induktionsanfang mit $k=1$, also $2^1$
-		$T(2) = T(1) + T(1) + 2$\\
-		$T(2) = 2$\\
-     	$a_2 = 2 * log(2)$\\
-    	$a_2 = 2$\\
-     	$=> T(2) = a_2$
+		\begin{equation}
+			\begin{aligned}
+				T(2) &= T(1) + T(1) + 2 \\
+				T(2) &= 2 			 \\
+     			a(2) &= 2 * log(2	)	 \\
+  				a(2) &= 2 			 \\
+  				\\
+     			&=> T(2) = a(2)\\
+			\end{aligned}
+		\end{equation}
+		
+		
+		
         
     \item Induktionsvorraussetzung: $T(n) = a_{n}$\\
-    	wobei $T(2^k) = T(\lfloor{\frac{2^{k-1}}{2}}\rfloor) + T(\lceil{\frac{2^{k-1}}{2}}\rceil) + 2^k$\\
+    	wobei $T(2^k) = \text{T}\left(\lfloor{\frac{2^{k-1}}{2}}\rfloor\right) + \text{T}\left(\lceil{\frac{2^{k-1}}{2}}\rceil\right) + 2^k$\\
         \\
     	und $a_{2^k} = 2^k * log_{2}(2^k)$
     \item Induktionsbehauptung: $a_2^{k+1} = T(2^{k+1})$ 
     	wir gehen dabei davon aus, dass $T(2^{k+1})$ bereits bewiesen wurde, da $T(2^k)$ bzw. $T(n)$ in der Aufgabenstellung gegeben ist.   
     \item Induktionsschritt $k \mapsto k+1$ \\
-       
-       $T(2^{k+1}) = 2 * T(2^k) + 2^{k+1}$
-       \par
-       \begingroup
-       \leftskip = 1,35cm 
-       \noindent
-       $ \overset{IV}{=} 2 * 2^k * log_{2}(2^k) + 2^{k+1}$ \\
-       \\
-       $ = 2^{k+1} * log_{2}(2^k) + 2^{k+1}$ \\
-       \\
-       $ = 2^{k+1} * (log_{2}(2^k) + 1)$ \\
-       \\
-       $ = 2^{k+1} * (log_{2}(2^k) + log_{2}2)$\\
-       \\
-       $ = 2^{k+1} * (log_{2}(2^k * 2^1)$ \\
-       \\
-       $ = 2^{k+1} * log_{2}(2^{k+1}) \Leftrightarrow a_{k+1}$ 
-       \par
-       \endgroup  
-      
+		\begin{equation}
+			\begin{aligned}
+				 T(2^{k+1}) &= 2 * T(2^k) + 2^{k+1} \\
+						    &\overset{IV}{=} 2 * 2^k * log_{2}(2^k) + 2^{k+1} \\
+						    &= 2^{k+1} * log_{2}(2^k) + 2^{k+1} \\
+						    &= 2^{k+1} * (log_{2}(2^k) + 1) \notag\\
+						    &= 2^{k+1} * (log_{2}(2^k) + log_{2}2)  \\
+						    &= 2^{k+1} * (log_{2}(2^k * 2^1) \\
+							&= 2^{k+1} * log_{2}(2^{k+1}) \Leftrightarrow a_{k+1} \\
+				
+			\end{aligned}
+		\end{equation}		       
    	 \end{itemize}
 	\end{proof}
     
@@ -93,22 +98,28 @@ Daraus erkennt man die geschlossene Formel: $a_{n} = n * log_{2}n$
 	(b)
 \end{flushleft}
 \begin{center}
-$S(1) = 1; S(n) = \displaystyle\sum_{i=1}^{n-1}i * S(i)$, für n > 1 
+$S(1) = 1; \quad S(n) = \displaystyle\sum_{i=1}^{n-1}i * S(i)$, für n > 1 
 \end{center}
 	\begin{itemize}
-	
-       $S(1) = 1 = 1$ \\
-       $S(2) = 1 * S(1) = 1$ \\
-       $S(3) = S(1) + 2*S(2) = 3$ \\
-       $S(4) = S(1) + 2*S(2) + 3*S(3) = 12$ \\
-       $S(5) = S(1) + 2*S(2) + 3*S(3) + 4*S(4)$
-       \\
+		\begin{equation}
+			\begin{aligned}
+				 S(1) &= 1 = 1		 \\
+     			 S(2) &= 1 * S(1) = 1 \\
+     			 S(3) &= S(1) + 2*S(2) = 3 \notag \\
+       			 S(4) &= S(1) + 2*S(2) + 3*S(3) = 12 \\
+      			 S(5) &= S(1) + 2*S(2) + 3*S(3) + 4*S(4) \\		
+			\end{aligned}
+		\end{equation} 
        Daraus ist zu erkennen: 
-       $S(1) = 1$ \\
-       $S(2) = 1$ \\
-       $S(3) = 6 = 3 * 2$ \\
-       $S(4) = 24 = 4 * 3 * 2 $ \\
-       $S(5) = 120 = 5 * 4 * 3 * 2$ \\
+       \begin{equation}
+ 		  \begin{aligned}
+ 		  	 S(1) &= 1 \\
+       		 S(2) &= 1 \\
+       		 S(3) &= 6 = 3 * 2  \notag \\
+       		 S(4) &= 24 = 4 * 3 * 2  \\
+       		 S(5) &= 120 = 5 * 4 * 3 * 2 \\
+ 		  \end{aligned}      
+       \end{equation}
        \\
        folglich kann allgemein gesagt werden: \\
        \[ a(n)= 
@@ -133,18 +144,19 @@ $S(1) = 1; S(n) = \displaystyle\sum_{i=1}^{n-1}i * S(i)$, für n > 1
        \]
        \newpage
        
-       Induktionsanfang: \\
-       n=1 \\
+       Induktionsanfang: $\quad n=1$ \\
        $a(1) = S(1)$ \\
-       n = 2\\
+       \\
+       $n=2$\\
        $a(2) = S(2)$ \\
+       \\
        gewähltes n > 2, also sei n=3\\
        $S(3) = 3 = a(n)$ \\
        \\
-       Induktionvorraussetzung: S(n) = a(n)\\
+       Induktionvorraussetzung:$\quad S(n) = a(n) $ \\
        \\
        Induktionsbehauptung: \\
-       S(n+1) = a(n+1), wobei vorausgesetzt ist, dass S(n)bereits per Induktion bewiesen wurde\\
+       $S(n+1) = a(n+1) \quad \text{, wobei vorausgesetzt ist, dass S(n)bereits per Induktion bewiesen wurde}$ \\
 	   \\       
        Induktionsschritt: \quad $n \rightarrow n+1$ \\
        \\
@@ -245,34 +257,38 @@ Lösungen: \\
 				\end{aligned}
 			\end{equation}
 		\end{proof}
-	\item 
+	\item $P(2) \wedge P(n) \rightarrow P(2n)$ \\
+		 \begin{equation}
+			\begin{aligned}
+				P(n): \quad \sqrt[n]{x_1x_2 \dots x_n} &\leq \frac{x_1+x_2+ \dots + x_n}{n} \\
+				\text{zu zeigen}:P(2) \wedge P(n) \rightarrow \sqrt[2n]{x_1x_2 \dots x_{2n}} &\leq \frac{x_1+x_2+ \dots x<-{2n}}{2n} \notag\\
+				\text{es gilt: } \frac{x_1+x_2+ \dots x_{2n}}{2n} &= \frac{\frac{x_1+x_2 \dots x_n}{n} + \frac{x_{n+1}+x_{n+2} \dots x_{2n}}{n}}{2} \\
+			\end{aligned}
+	     \end{equation}
+	     
+	     Sei $\quad \frac{x_1+x_2+ \dots +x_n}{n} &\geq \sqrt[n]{x_1x_2 \dots x_n} \quad$ Term $t_1$ \\
+	     und $\quad \frac{x_{n+1}+x_{n+2}+ \dots +x_{2n}}{n} &\geq \sqrt[n]{x_1x_2 \dots x_n} \quad $ Term $t_2$ \\
+	    \\
+	    \newpage
+	    
+	    angenommen: P(2) $\wedge$ P(n) $\Rightarrow$ P(2n) \\
+	    Dann setze $t_1 \wedge t_2$ in P(2) ein
+	     \begin{equation}
+			\begin{aligned}
+				\textbf{zu zeigen: } \quad \left(\frac{\frac{x_1+x_2 + \dots +x_n}{n} + \frac{x_{n+1} + x_{n+2} + \dots +x_{2n}}{n}}{2} \right)^2 &\geq	 \sqrt[n]{x_1x_2 \dots x_n} * \sqrt[n]{x_{n+1}x_{n+2} \dots x_{2n}} \\
+			    	\left(\frac{\frac{x_1+x_2 + \dots +x_n}{n} + \frac{x_{n+1} + x_{n+2} + \dots +x_{2n}}{n}}{2} \right) &\geq \sqrt{\sqrt[n]{x_1x_2 \dots x_n} * \sqrt[n]{x_{n+1}x_{n+2} \dots x_{2n}}}	 \\ 
+			    	\left(\frac{\frac{x_1+x_2 + \dots +x_n}{n} + \frac{x_{n+1} + x_{n+2} + \dots +x_{2n}}{n}}{2} \right) &\geq \sqrt[2n]{x_1x_2 \dots x_{2n}} \quad \text{,da:} a^{\frac{1}{n}} * b^{\frac{1}{n}} \Leftrightarrow (a*b)^{\frac{1}{n}} \notag \\
+			    	\frac{x_1+x_2 + \dots +x_{2n}}{2n} &\geq \sqrt[2n]{x_1x_2 \dots x_{2n}}\\ 
+				&\Rightarrow P(2n)
+			\end{aligned}	      
+	      \end{equation}
+	      Somit ist gezeigt, dass auf Grund der Gültigkeit von P(2) die Formel P(n) für zwei Terme und des Beweises, dass P(n) für beliebige n wahr ist, dass P(2n) für beliebige n wahr ist. 
+	     
 	
   \end{itemize}
+\\
+\\
 
-\begin{flushleft}
-	(1.)
-\end{flushleft}
-
-\begin{itemize}
-\item
-	\begin{proof}
-	 P(2) ist wahre Aussage \\
-		$$x_1*x_2 \leq (\frac{x_1+x_2}{2})^2$ \\
-		$$x_1*x_2 \leq \frac{(x_1+x_2)^2}{4}$  \\
-		$$4*x_1*x_2 \leq (x_1+x_2)^2$ \\
-		$$4*x_1*x_2 \leq {x_1}^2 + 2*x_1x_2 + {x_2}^2 | -4*x_1x_2$\\
-		$$0 \leq {x_1}^2 - 2*x_1x_2 + {x_2}^2 $\\
-		$$0 \leq  (x_1-x_2)^2 $ w.A., da $ x_1, x_2 \geq 0 $\\
-		
-	    
-	\end{proof}
-\end{itemize}
-
-\newpage
-
-
-
-\newpage
 \section{Manipulation elementarer Funktionen}
 
 Finden Sie Paare von \"aquivalenten Termen und formen Sie diese
