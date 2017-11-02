@@ -72,12 +72,14 @@
 	\item \textbf{Effizienz der Algorithmen} 
 		\begin{enumerate}
 			\item Addition
-				Mit dem Algorithmus zur Addition sind wir im Vergleich zu der in der Vorlesung vorgestelltem Darstellung mit k-0-Koeffizienten effizienter, da wir auf die Abspeicherung dieser verzichten, wodurch wir nur noch $(n-k)$ (n - Grad des Polynoms), anstatt n Additionen (wie in der Darstellung aus der Vorlesung) durchführen müssen. Damit unterlassen wir unnötige Additionsoperationen von k-0-Koeffizienten. 
+				Mit dem Algorithmus zur Addition sind wir im Vergleich zu der in der Vorlesung vorgestelltem Darstellung mit l-0-Koeffizienten effizienter, da wir auf die Abspeicherung dieser verzichten, wodurch wir nur noch $(k)$ (n - Grad des Polynoms, k- Anzahl der nicht 0- Koeffizienten), anstatt n Additionen (wie in der Darstellung aus der Vorlesung) durchführen müssen. Damit unterlassen wir unnötige Additionsoperationen von l-0-Koeffizienten. 
 			\item Multiplikation
- 				Unsere Darstellung bewährt sich auch bei der Multiplikation von zwei Polynomen $p(x),q(x)$, da hier keine $(k*k^')$-0-Produkte vorkommen (wobei $k$ bzw. $k^'$ - Anzahl der 0-Koeffizienten in $p(x)$ bzw. $q(x)$), da nur mit Koeffizienten $a_i \neq 0$ mit $0 \leq i \leq n$ gerechnet wird.\\
-				Somit ist auch hier unser Algorithmus zur gewählten Darstellung effizienter als der in der Vorlesung vorgestellte.
+ 				Unsere Darstellung bewährt sich auch bei der Multiplikation von zwei Polynomen $p(x),q(x)$, da hier keine $(l*l^')$-0-Produkte vorkommen (wobei $l$ bzw. $l^'$ - Anzahl der 0-Koeffizienten in $p(x)$ bzw. $q(x)$), da nur mit Koeffizienten $a_i \neq 0$ mit $0 \leq i \leq n$ gerechnet wird.\\
+				Somit ist auch hier unser Algorithmus zur gewählten Darstellung effizienter als der in der Vorlesung vorgestellte. \\ 
+				Die Laufzeit des Algorithmus ist in O(k^2), wobei k die Anzahl der nicht 0-Koeffizienten ist. 
 			\item Auswertung an $x_0$
-				Die Auswertung eines Polynoms $p(x)$ an einer Stelle $x_0$ ist ebenso effizienter als der in der Vorlesung vorgestellte Algorithmus. Dabei können k-0-Produkte die durch Multiplikation eines 0-Koeffizienten und der i-ten Potenz von $x_0$ entstehen würden, sowie die k-Additionen (Anzahl der 0-Koeffizienten) weggelassen werden, was unseren Algorithmus effizienter gestaltet. 
+				Die Auswertung eines Polynoms $p(x)$ an einer Stelle $x_0$ ist ebenso effizienter als der in der Vorlesung vorgestellte Algorithmus. Dabei können l-0-Produkte die durch Multiplikation eines 0-Koeffizienten und der i-ten Potenz von $x_0$ entstehen würden, sowie die l-Additionen (Anzahl der 0-Koeffizienten) weggelassen werden, was unseren Algorithmus effizienter gestaltet. \\
+				Die Laufzeit ist in der Klasse: O(k*log(k))
 		\end{enumerate}
 		
 		\item \textbf{Implementierung der oben vorgestellten Darstellung von Polynomen}
