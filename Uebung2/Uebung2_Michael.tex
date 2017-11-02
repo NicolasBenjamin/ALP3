@@ -279,6 +279,62 @@
  					\end{aligned}
  				\end{equation}
  		\end{itemize}
+ 		\item \\
+ 			Seien A,B,C Stangen und A Startstange und C Endstange mit n Scheiben. \\
+ 			So kann das Problem erneut rekursiv gelöst werden. Wir ermitteln die Formel durch Beobachtung. \\ 			
+ 			Zu Beginn wollen wir Scheibe n von A nach C bringen. Dafür können wir die anderen Scheiben weitestgehend so verschieben, dass sie von A nach B verlegt werden. \\
+ 			z.B.: $\quad$ bei n=6, S = Scheibe, Ziel: Scheibe n nach C verschieben \\
+ 			\begin{equation}
+ 				\begin{aligned}
+ 					S1: \quad A &\rightarrow B \\
+ 					S2: \quad A &\rightarrow C \Rightarrow S1: B \rightarrow C \\
+ 					S3: \quad A &\rightarrow B \Rightarrow S1: C \rightarrow B, S2: C \rightarrow B \\
+ 					S4: \quad A &\rightarrow C \Rightarrow S2: B \rightarrow C, S1: B\rightarrow C, S3: B \rightarrow C \notag \\
+ 					\dots \\
+ 					S6: \quad \dots \\					
+ 				\end{aligned}
+			\end{equation} 	\\ 	
+			Wir können beobachten, $\lceil{ \frac{n-1}{2} }\rceil$ Scheiben aufsteigend geordnet sind und die folgenden $\lfloor{\frac{n-1}{2}}\rfloor$ Elemente absteigend geordnet sind (Betrachtung des Stapels von oben). \\
+			Anschließend kann man das oberste bis vorletzte Element con B nach A schieben, sodass die geforderte Ordnung erhalten bleibt und setzt Scheibe 5 nach C. \\
+			Dies wiederholt man so lange bis C geordnet und vollständig ist. 
+			\item Formel: 
+				Wir benötigen für den ersten Schritt, um die Scheibe n nach C zu bekommen folgende Anzahl von Schritten. \\
+			 	\begin{equation}
+			 		\begin{aligned}
+			 			bewege(n) &= (n-1)+ bewege(n-1) \\
+			 			bewege(1) &= 1 - (n-1) \quad \notag \\			 			
+			 		\end{aligned}
+			 	\end{equation}
+			 	\item mit (n-1) bezeichnen wir den Abzug der letzen Verschiebung auf C, da nicht alle Elemente am Ende auf C liegen müssen, sondern nur Scheibe n \\
+			 	\item Anschließend müssen wir noch für jede umzuschiebene Scheibe, also (n-1) auf B oder A die Scheiben $1, \dots ,(n-2)$ auf den jeweils anderen Stapel schichten und Scheibe n-1 nach C verschieben. Das wiederholen wir bis C fertig ist. \\
+			 	Also: \\
+			 	\begin{equation}
+			 		\begin{aligned}
+			 			bewege_zuletzt(n) &= n + bewege_zuletzt(n-1)\\
+			 			bewege_zuletzt(1)& = 1 \notag\\ 
+ 			 		\end{aligned}
+			 	\end{equation}
+			 	Fassen wir beide Formeln zusammen, erhalten wir: 
+			 	\begin{equation}
+			 		\begin{aligned}
+			 			bewege(n) &= (n-1) + bewege(n-1) \\
+			 			bewege(1) &= 1 - (n-1) \notag\\ 
+			 		\end{aligned}
+			 	\end{equation}
+			 	Also: 
+			 	\begin{equation}
+			 		\begin{aligned}
+			 			\displaystyle \sum_{i=1}^{n-1}{i} \quad + \quad \displaystyle\sum_{i=1}^{n}{i}\quad = \quad 2* \left(\displaystyle\sum_{i=1}^{n}{i}\right) - n \notag\\
+			 		\end{aligned}
+			 	\end{equation}
+			 	\item setzen wir nun n=100 ein erhalten wir:
+			 	\begin{equation}
+			 		\begin{aligned}
+			 			2*\left(\displaystyle\sum_{i=1}^{100}{i}\right) - 100 &= 2**\frac{100^2 + 100}{2} - 100 \notag \\
+			 			&= 10000 \\
+			 		\end{aligned}
+			 	\end{equation}
+			 	\item folglich bräuchte man ca. 10000 Tage zum verschieben, was ca. 27 Jahre währen \\
  \end{itemize}
 
 % /////////////////////// END DOKUMENT /////////////////////////
