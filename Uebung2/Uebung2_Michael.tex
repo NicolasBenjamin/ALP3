@@ -177,7 +177,7 @@
 		\begin{center}
 			\includegraphics[width=1\textwidth]{src/Daten_Sortieralgorithmen.jpg}
 		\end{center}
-		\item Auswertung 
+		\item Auswertung \\
 		Es ist deutlich zu erkennen, dass Bubblesort mit steigenden Eingabegrößen eine deutlich längere Ausführungszeit besitzt als Quicksort. Gleiches ist beim Vergleich von Quicksort und Mergesort festzustellen. Dieses Ergebnis spiegelt die den Sortieralgorithmen entsprechenden Komplexitätsklassen von Quick-/Bubblesort mit $O(n^2)$ und $O(n*log(n))$ von Mergesort. 
 		\item Vorteile der Algorithmen
 			\begin{enumerate}
@@ -197,12 +197,12 @@
 				\item Mergesort
 					Mergesort benötigt zur Ausführung externen Speicher, da es kein in-place Algorithmus ist.  
 			\end{enumerate}
-		\item Verwendung der Algorithmen 
+		\item Verwendung der Algorithmen \\
 			Wenn nur mit sehr kleinen Eingaben gearbeitet wird und die Laufzeit nicht ins Gewicht fällt, ist Bubblesort eine einfache, schnell zu erstellende und stabile Lösung.
 	Benötigt man eine hohe Ausführungsgeschwindigkeit und die Eingaben sind teils sortierte Listen ist Quicksort zu empfehlen. Dabei muss beachtet werden, dass Quicksort nicht satbil
 		ist und die Eingabelisten nicht zu groß sein dürfen, da die Laufzeit gegen $O(n^2)$ geht.
 	Mergesort ist unter den drei gewählten Verfahren das mit der besten Laufzeit in allen drei Fällen. Es ist aber nicht in-place, d.h. es wird zusätzlicher Speicher gebraucht, um Mergesort anzuwenden. Bei sehr großen Eingaben ist Mergesort unter den dreien sehr zu empfehlen, da es auch dort am schnellsten ist.
-		\item Aussagen der O-Notation
+		\item Aussagen der O-Notation\\
 	Schaut man sich die Laufzeitfunktion zu den gemessenen Eingaben an erkennt man, dass diese bei Bubblesort und Quicksort den Grad 2 besitzen, sie also quadratisch und damit in der Komplexitätsklasse 
 		von $O(n^2)$ liegen, also die Funktion $f(n)=n^2$ die obere Grenze ist.
 	Bei Mergesort lässt sich ähnliches erkennen. Dort stellt die Funktion $f(n)=n*log(n)$ die obere Grenze des Graphen der gemessenen Werte dar.
