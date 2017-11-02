@@ -76,10 +76,11 @@
 			\item Multiplikation
  				Unsere Darstellung bewährt sich auch bei der Multiplikation von zwei Polynomen $p(x),q(x)$, da hier keine $(l*l^')$-0-Produkte vorkommen (wobei $l$ bzw. $l^'$ - Anzahl der 0-Koeffizienten in $p(x)$ bzw. $q(x)$), da nur mit Koeffizienten $a_i \neq 0$ mit $0 \leq i \leq n$ gerechnet wird.\\
 				Somit ist auch hier unser Algorithmus zur gewählten Darstellung effizienter als der in der Vorlesung vorgestellte. \\ 
-				Die Laufzeit des Algorithmus ist in O(k^2), wobei k die Anzahl der nicht 0-Koeffizienten ist. 
+				Die Laufzeit des Algorithmus ist in $O(k^2)$, wobei k die Anzahl der nicht 0-Koeffizienten ist. 
 			\item Auswertung an $x_0$
-				Die Auswertung eines Polynoms $p(x)$ an einer Stelle $x_0$ ist ebenso effizienter als der in der Vorlesung vorgestellte Algorithmus. Dabei können l-0-Produkte die durch Multiplikation eines 0-Koeffizienten und der i-ten Potenz von $x_0$ entstehen würden, sowie die l-Additionen (Anzahl der 0-Koeffizienten) weggelassen werden, was unseren Algorithmus effizienter gestaltet. \\
-				Die Laufzeit ist in der Klasse: O(k*log(k))
+				Die Auswertung eines Polynoms $p(x)$ an einer Stelle $x_0$ ist ebenso effizienter als der in der Vorlesung vorgestellte Algorithmus. Dabei können l-0-Produkte die durch Multiplikation eines 0-Koeffizienten und der zugehörigen i-ten Potenz von $x_0$ entstehen würden, sowie die l-Additionen (Anzahl der 0-Koeffizienten) weggelassen werden, was unseren Algorithmus effizienter gestaltet. \\
+				Wir nehmen an, dass das Potenzieren der $x_0$ in O(1) liegt. \\
+				Die Laufzeit unseres Algorithmusses ist damit in der Klasse: $O(k)$\\
 		\end{enumerate}
 		
 		\item \textbf{Implementierung der oben vorgestellten Darstellung von Polynomen}
